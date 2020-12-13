@@ -1,0 +1,32 @@
+
+
+<div data-role="popup" id="myPopup2" class="ui-content" style="min-width:250px;">
+    <form  #f="ngForm"   method="post" (ngSubmit)="addUser()">
+      <div>
+        <h3>register information</h3>
+        <label for="usrnm" class="ui-hidden-accessible">Username:</label>
+        <input type="text" name="user" id="usrnm" placeholder="Username" [(ngModel)]="User.username" #username="ngModel" required>
+        <div class="alert alert-danger" *ngIf="username.invalid && username.touched">
+            <div *ngIf="username.errors.required">username obligatoire</div>
+           
+         </div>
+        <label for="usrnm" class="ui-hidden-accessible">email:</label>
+        <input type="email" name="email" id="email" placeholder="email"  [(ngModel)]="User.email" #email="ngModel" required email >
+        <div class="alert alert-danger" *ngIf="email.invalid && email.touched  ">
+            <div *ngIf="email.errors.required">email obligatoire</div>  
+            <div  *ngIf="email.errors.email   " >
+                email invalid
+             </div>
+         </div>
+       
+        <label for="pswd" class="ui-hidden-accessible">Password:</label>
+        <input type="password" name="passw" id="pswd" placeholder="Password" [(ngModel)]="User.password" #password="ngModel" required minlength="6">   
+        <div class="alert alert-danger" *ngIf="password.invalid && password.touched">
+            <div *ngIf="password.errors.required">password obligatoire</div>
+            <div *ngIf="password.errors.minlength">le taille doit etre sup a 6</div>
+         </div>
+        
+        <input type="submit" data-inline="true"  value="register">
+      </div>
+    </form>
+  </div>

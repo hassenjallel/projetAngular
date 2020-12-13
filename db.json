@@ -1,0 +1,86 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "id": 1,
+      "username": "hassen",
+      "email": "hassen.jalleli@esprit.tn",
+      "password": "azerty1234"
+    },
+    {
+      "username": "has",
+      "email": "hassen.jalleli@esprit.tn",
+      "password": "azerty1234",
+      "id": 2
+    },
+    {
+      "username": "ang",
+      "email": "ang@ang.com",
+      "password": "azerty1234",
+      "id": 3
+    },
+    {
+      "username": "youssef",
+      "email": "youssef@esprit.tn",
+      "password": "azerty1234",
+      "id": 4
+    },
+    {
+      "username": "has",
+      "email": "has@ghf.com",
+      "password": "azerty",
+      "id": 5
+    },
+    {
+      "username": "angular",
+      "email": "angular@angular.com",
+      "password": "azerty1234",
+      "id": 6
+    }
+  ],
+  "match": [
+    {
+      "id": 1,
+      "iduser": "5",
+      "name": "hassen",
+      "playernumb": 4,
+      "phonenumb": 55555555,
+      "localisation": "zahra",
+      "Datee": "13-12-2020"
+    },
+    {
+      "name": "hassen",
+      "playernumb": 5,
+      "phonenumb": 28866156,
+      "localisation": "zahra",
+      "Datee": "2020-12-26",
+      "iduser": "1",
+      "id": 5
+    },
+    {
+      "name": "aymen",
+      "playernumb": 5,
+      "phonenumb": 20000000,
+      "localisation": "zahra",
+      "Datee": "2020-12-30",
+      "iduser": "1",
+      "id": 6
+    }
+  ]
+}

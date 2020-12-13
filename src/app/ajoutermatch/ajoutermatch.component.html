@@ -1,0 +1,39 @@
+<div data-role="popup" id="myPopup3" class="ui-content" style="min-width:250px;">
+    <form  #f="ngForm"   method="post" (ngSubmit)="addmatch()" >
+      <div>
+        <h3>ajouter match</h3>
+       
+        <input type="text" name="user" id="name" placeholder="team name" [(ngModel)]="match.name" #name="ngModel" required>
+        <div class="alert alert-danger" *ngIf="name.invalid && name.touched">
+            <div *ngIf="name.errors.required">team name obligatoire</div>
+           
+         </div>
+        
+        <input type="number" name="playernumb" id="playernumb" placeholder="place number"  [(ngModel)]="match.playernumb" #playernumb="ngModel" required >
+        <div class="alert alert-danger" *ngIf="playernumb.invalid && playernumb.touched  ">
+            <div *ngIf="playernumb.errors.required">email obligatoire</div>  
+            
+         </div>
+       
+      
+        <input type="number" name="passw" id="pswd" placeholder="phone number" [(ngModel)]="match.phonenumb" #phonenumb="ngModel" required minlength="8">   
+        <div class="alert alert-danger" *ngIf="phonenumb.invalid && phonenumb.touched">
+            <div *ngIf="phonenumb.errors.required">phone number obligatoire</div>
+            <div *ngIf="phonenumb.errors.minlength">le taille doit etre egale a 8</div>
+         </div>
+
+        
+        <input type="text" name="passw" id="pswd" placeholder="localisation" [(ngModel)]="match.localisation" #localisation="ngModel" required minlength="5">   
+        <div class="alert alert-danger" *ngIf="localisation.invalid && localisation.touched">
+            <div *ngIf="localisation.errors.required">localisation obligatoire</div>
+            <div *ngIf="localisation.errors.minlength">le taille doit etre sup a 5</div>
+         </div>
+         
+         <input type="date" name="passw" id="pswd" placeholder="date" [(ngModel)]="match.Datee" #date="ngModel" required >   
+         <div class="alert alert-danger" *ngIf="date.invalid && date.touched">
+             <div *ngIf="date.errors.required">date obligatoire</div>
+          </div>
+        <input type="submit" data-inline="true"  value="register">
+      </div>
+    </form>
+  </div>
